@@ -1,0 +1,67 @@
+:root {
+  --sans-font: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir, "Nimbus Sans L", Roboto, "Noto Sans", "Segoe UI", Arial, Helvetica, "Helvetica Neue", sans-serif;
+  --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  --bg: #fff;
+  --accent-bg: #f5f7ff;
+  --text: #212121;
+  --text-light: #585858;
+  --border: #898EA4;
+  --accent: #0d47a1;
+  --code: #d81b60;
+  --preformatted: #444;
+  --marked: #ffdd33;
+  --disabled: #efefef;
+}
+
+/* styles below */
+
+
+body {
+  width: 800px; /* width of the container */
+  margin: auto; /* Centered horizontally */
+
+  font-family: var(--sans-font);
+  background-color: var(--bg);
+  color: var(--text);
+  padding-bottom: 50px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--sans-font);
+  color: var(--text);
+}
+
+p {
+  font-family: var(--sans-font);
+  color: var(--text);
+  font-size: 18px;
+}
+
+ul {
+  font-size: 18px;
+}
+
+a {
+  color: var(--accent);
+}
+
+pre {
+  font-family: var(--mono-font);
+  background-color: var(--preformatted);
+  color: var(--bg);
+  border: 1px solid var(--border);
+  padding: 16px;
+}
+
+code {
+  font-family: var(--mono-font);
+  color: var(--code);
+}
+
+blockquote {
+  font-family: var(--sans-font);
+  color: var(--text-light);
+  border-left: 4px solid var(--accent);
+  padding: 0 16px;
+  margin: 16px 0;
+}
