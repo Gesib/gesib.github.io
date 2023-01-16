@@ -30,7 +30,7 @@ url: " https://gesib.github.io" # the base hostname & protocol for your site, e.
 github_username:  gesib
 
 # Build settings
-theme: minima
+remote_theme: jamigibbs/phantom
 plugins:
   - jekyll-feed
 
