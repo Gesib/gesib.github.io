@@ -26,9 +26,11 @@ function cellsByRowDefinition( LayoutMode ) {
     item.getSize();
     var col = this.itemIndex % this.cols;
     var row = Math.floor( this.itemIndex / this.cols );
+    var imageWidth = item.size.outerWidth || 400;
+    var imageHeight = item.size.outerHeight || 396;
     // center item within cell
-    var x = ( col + 0.5 ) * this.columnWidth - item.size.outerWidth / 2;
-    var y = ( row + 0.5 ) * this.rowHeight - item.size.outerHeight / 2;
+    var x = ( col + 0.5 ) * this.columnWidth - imageWidth / 2;
+    var y = ( row + 0.5 ) * this.rowHeight - imageHeight / 2;
     this.itemIndex++;
     return { x: x, y: y };
   };
