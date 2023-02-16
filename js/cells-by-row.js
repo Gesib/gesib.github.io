@@ -11,35 +11,35 @@ function cellsByRowDefinition( LayoutMode ) {
 
   var CellsByRow = LayoutMode.create( 'cellsByRow' );
 
-  CellsByRow.prototype._resetLayout = function() {
-    var self = this;
-    
-    // reset properties
-    this.itemIndex = 0;
-  
-    // wait for images to load
-    imagesLoaded( this.isotope.element, function() {
-      // measurements
-      self.getColumnWidth();
-      self.getRowHeight();
-      // set cols
-      self.cols = Math.floor( self.isotope.size.innerWidth / self.columnWidth );
-      self.cols = Math.max( self.cols, 1 );
-      // trigger Isotope layout
-      self.isotope.layout();
-    });
-  };
-
   // CellsByRow.prototype._resetLayout = function() {
+  //   var self = this;
+    
   //   // reset properties
   //   this.itemIndex = 0;
-  //   // measurements
-  //   this.getColumnWidth();
-  //   this.getRowHeight();
-  //   // set cols
-  //   this.cols = Math.floor( this.isotope.size.innerWidth / this.columnWidth );
-  //   this.cols = Math.max( this.cols, 1 );
+  
+  //   // wait for images to load
+  //   imagesLoaded( this.isotope.element, function() {
+  //     // measurements
+  //     self.getColumnWidth();
+  //     self.getRowHeight();
+  //     // set cols
+  //     self.cols = Math.floor( self.isotope.size.innerWidth / self.columnWidth );
+  //     self.cols = Math.max( self.cols, 1 );
+  //     // trigger Isotope layout
+  //     self.isotope.layout();
+  //   });
   // };
+
+  CellsByRow.prototype._resetLayout = function() {
+    // reset properties
+    this.itemIndex = 0;
+    // measurements
+    this.getColumnWidth();
+    this.getRowHeight();
+    // set cols
+    this.cols = Math.floor( this.isotope.size.innerWidth / this.columnWidth );
+    this.cols = Math.max( this.cols, 1 );
+  };
 
   CellsByRow.prototype._getItemLayoutPosition = function( item ) {
     item.getSize();
